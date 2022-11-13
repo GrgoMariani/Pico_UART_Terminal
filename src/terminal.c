@@ -119,6 +119,9 @@ void Term_Init()
 
     // Now enable the UART to send interrupts - RX only
     uart_set_irq_enables(UART_ID, true, false);
+    char first_message[26] = "---SCREEN INITIALIZED---\n";
+    for (int i=0 ; i<25; i++)
+        term_add(first_message[i]);
 }
 
 void Term_Update()

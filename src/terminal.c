@@ -54,7 +54,7 @@ void add_row()
 
 void term_add(uint8_t c)
 {
-    if (c == '\n' || c == '\r')
+    if (c == '\n')
     {
         add_row();
         return;
